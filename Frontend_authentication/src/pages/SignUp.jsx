@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
+import Oauth from '../components/Oauth';
 
 export default function SignUp() {
 
@@ -51,6 +52,7 @@ export default function SignUp() {
       <input type="password" onChange={handleChange} name="password" id="password" placeholder='password' className='bg-slate-300 p-3 rounded-lg'/>
       <button disabled={loading} className='bg-slate-800 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>{loading ? 'loading...' : 'Sign up'}</button>
     
+    <Oauth/>
     </form>
     <div className='flex gap-2 mt-5'>
       <p>Have an account?</p>

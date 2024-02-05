@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link,useNavigate } from 'react-router-dom';
 import { signInFailure,signInSucess,signInStart } from '../redux/user/userSlice';
 import {useDispatch,useSelector} from 'react-redux'
+import Oauth from '../components/Oauth';
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ export default function SignIn() {
         <input type="email" onChange={handleChange} name='email' id='email' placeholder='Email' className='bg-slate-300 p-3 rounded-lg' />
         <input type="password" onChange={handleChange} name='password' id='password' placeholder='Password'  className='bg-slate-300 p-3 rounded-lg' />
         <button disabled={loading} className='bg-slate-800 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>{loading ? 'loading...' : 'Sign-In'}</button>
+      <Oauth/>
       </form>
       <div className='flex gap-2 mt-5'>
         <p>Have an account?</p>
