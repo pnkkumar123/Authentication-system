@@ -15,7 +15,7 @@ export default function SignUp() {
     setFormData({...formData,[e.target.id]:e.target.value})
 
   }
-  // where async is used use new react updates
+  // where async is used use new suspensive react updates
   const handleSubmit = async (e)=>{
     e.preventDefault();
     try{
@@ -54,7 +54,7 @@ export default function SignUp() {
     
     <Oauth/>
     </form>
-    <div className='flex gap-2 mt-5'>
+    <div className='lg:flex gap-2 mt-5'>
       <p>Have an account?</p>
       <Link to='/signin'><span className='text-blue-500'>Sign-In</span></Link>
     </div>
